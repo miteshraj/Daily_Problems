@@ -1,3 +1,39 @@
+# 7/6/19
+
+name = ""
+while name != "Bob"
+  puts "What is your name?"  
+  name = gets.chomp
+  if name.downcase == "bob"
+    break
+  end
+end
+
+p "Hi, Bob!"
+
+
+
+items = [
+  {id: 1, body: 'foo'},
+  {id: 2, body: 'bar'},
+  {id: 3, body: 'foobar'}
+]
+
+p items.map {|item| item[:id]}
+
+
+
+fruits = [
+  {"name" => "apple", "color" => "red"},
+  {"name" => "banana", "color" => "yellow"},
+  {"name" => "grape", "color" => "purple"}
+]
+
+p fruits.map { |fruit| [fruit['name'], fruit['color']]}.to_h
+
+
+###
+
 def double_numbers(array)
 new_array = []
 array.each {|a| new_array << a * 2}
