@@ -9,7 +9,7 @@ while name != "Bob"
   end
 end
 
-p "Hi, Bob!"
+# p "Hi, Bob!"
 
 
 
@@ -19,7 +19,7 @@ items = [
   {id: 3, body: 'foobar'}
 ]
 
-p items.map {|item| item[:id]}
+# p items.map {|item| item[:id]}
 
 
 
@@ -29,7 +29,7 @@ fruits = [
   {"name" => "grape", "color" => "purple"}
 ]
 
-p fruits.map { |fruit| [fruit['name'], fruit['color']]}.to_h
+# p fruits.map { |fruit| [fruit['name'], fruit['color']]}.to_h
 
 
 ###
@@ -50,7 +50,7 @@ while index < numbers.length  do
   sum = sum + number
   index = index + 1
 end
-p sum
+# p sum
 
 
 
@@ -63,7 +63,7 @@ while index < array.length
 end
 return sum / array.length.to_f
 end
-p averages([2, 1, 7, 5])
+# p averages([2, 1, 7, 5])
 
 def average(array)
 index = 0
@@ -75,4 +75,14 @@ end
 return sum / array.length.to_f
 end
 
-p averages([2, 1, 7, 5])
+# p averages([2, 1, 7, 5])
+
+
+def reverse_a_string(input_string)
+	reverse_string = ""
+	input_string.each_char {|character| 
+		reverse_string.insert(0,character)}
+		reverse_string
+end
+
+puts reverse_a_string("hello")
