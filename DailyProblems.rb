@@ -85,4 +85,45 @@ def reverse_a_string(input_string)
 		reverse_string
 end
 
-puts reverse_a_string("hello")
+# puts reverse_a_string("hello")
+
+
+fruits = [
+  {"name" => "apple", "color" => "red"},
+  {"name" => "banana", "color" => "yellow"},
+  {"name" => "grape", "color" => "purple"}
+]
+
+p fruits.map { |fruit| [fruit['name'], fruit['color']]}.to_h
+
+
+
+
+## original 
+
+numbers = [1, 2, 4, 2]
+even_numbers = []
+numbers.each do |number|
+  if number % 2 == 0
+    even_numbers << number
+  end
+end
+ even_numbers
+
+## Refactored
+p numbers.select { |number| number % 2 == 0 }
+
+
+
+movies = [
+  {id: 1, title: "Die Hard", rating: 4.0},
+  {id: 2, title: "Bad Boys", rating: 5.0},
+  {id: 3, title: "The Chamber", rating: 3.0},
+  {id: 4, title: "Fracture", rating: 2.0}
+]
+# Printg movies with a rating of 4.0 or lower
+p movies.select {|movie| movie[:rating] < 4.0}
+
+# Return the IDs of movies that have a b in them case insensitive
+new_array_1 = []
+p movies.select { |movie| movie[:title].downcase.include?('b')}.map { |movie| movie[:id]}
